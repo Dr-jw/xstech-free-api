@@ -146,14 +146,14 @@
             background: linear-gradient(135deg, #667eea, #764ba2);
         }
 
-        /* Claude 模型样式 */
-        .claude {
-            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+        /* Llama 模型样式 */
+        .llama {
+            background: linear-gradient(135deg, #ff8a00, #da1b60);
         }
 
-        /* GPT 模型样式 */
-        .gpt {
-            background: linear-gradient(135deg, #4ecdc4, #44a08d);
+        /* Gemini 模型样式 */
+        .gemini {
+            background: linear-gradient(135deg, #4285f4, #34a853);
         }
 
         .contact-info {
@@ -418,67 +418,42 @@
                         <div class="models">
                             <div class="model-card deepseek">
                                 <h3>DeepSeek R1</h3>
-                                <p>最新的推理增强模型，擅长复杂逻辑推理和数学计算，具有强大的思维链能力</p>
+                                <p>最新的推理增强模型，擅长复杂逻辑推理和数学计算，具有强大的思维链能力，是最先进的推理模型</p>
                                 <div class="model-name">deepseek-r1</div>
                             </div>
                             <div class="model-card deepseek">
                                 <h3>DeepSeek V3</h3>
-                                <p>强大的通用对话模型，适合各种文本生成任务，平衡了性能与效率</p>
+                                <p>强大的通用对话模型，在多个任务上表现优异，平衡了性能与效率，支持多轮对话</p>
                                 <div class="model-name">deepseek-v3</div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Claude 模型 -->
+                    <!-- Llama 模型 -->
                     <div class="category">
-                        <h3>🎯 Claude 模型</h3>
+                        <h3>🦙 Llama 模型</h3>
                         <div class="models">
-                            <div class="model-card claude">
-                                <h3>Claude 3.7 Sonnet Thinking</h3>
-                                <p>最新的思维模式版本，具有强大的推理和分析能力，适合复杂任务处理</p>
-                                <div class="model-name">claude-3-7-sonnet-thinking</div>
+                            <div class="model-card llama">
+                                <h3>Llama 3.3 70B Instruct</h3>
+                                <p>Meta 最新的中型规模模型，具有 70B 参数，在推理和代码生成方面表现出色</p>
+                                <div class="model-name">llama-3.3-70b-instruct</div>
                             </div>
-                            <div class="model-card claude">
-                                <h3>Claude 3.7 Sonnet (20250219) Thinking</h3>
-                                <p>2025年2月19日版本的思维模式，优化了推理逻辑和响应质量</p>
-                                <div class="model-name">claude-3-7-sonnet-20250219-thinking</div>
-                            </div>
-                            <div class="model-card claude">
-                                <h3>Claude 3.7 Sonnet (20250219)</h3>
-                                <p>Claude 3.7 的标准版本，适合日常对话和文本处理任务</p>
-                                <div class="model-name">claude-3-7-sonnet-20250219</div>
-                            </div>
-                            <div class="model-card claude">
-                                <h3>Claude 3.5 Sonnet (20241022)</h3>
-                                <p>Claude 3.5 系列的强大版本，在创意写作和分析任务上表现优秀</p>
-                                <div class="model-name">claude-3-5-sonnet-20241022</div>
-                            </div>
-                            <div class="model-card claude">
-                                <h3>Claude 3.5 Haiku (20241022)</h3>
-                                <p>快速响应的轻量级模型，适合简单对话和快速文本处理</p>
-                                <div class="model-name">claude-3-5-haiku-20241022</div>
+                            <div class="model-card llama">
+                                <h3>Llama 3.1 405B</h3>
+                                <p>目前最大规模的开源语言模型，拥有 405B 参数，在复杂任务和长文本处理上性能卓越</p>
+                                <div class="model-name">llama-3.1-405b</div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- GPT 模型 -->
+                    <!-- Gemini 模型 -->
                     <div class="category">
-                        <h3>⚡ GPT 模型</h3>
+                        <h3>💎 Gemini 模型</h3>
                         <div class="models">
-                            <div class="model-card gpt">
-                                <h3>GPT-4.1</h3>
-                                <p>最新版本的GPT-4，具有更强的推理能力和更准确的响应</p>
-                                <div class="model-name">gpt-4.1</div>
-                            </div>
-                            <div class="model-card gpt">
-                                <h3>GPT-4o</h3>
-                                <p>多模态版本的GPT-4，支持文本、图像等多种输入格式</p>
-                                <div class="model-name">gpt-4o</div>
-                            </div>
-                            <div class="model-card gpt">
-                                <h3>GPT-4o Mini</h3>
-                                <p>轻量级版本的GPT-4o，响应速度快，成本较低，适合大量请求场景</p>
-                                <div class="model-name">gpt-4o-mini</div>
+                            <div class="model-card gemini">
+                                <h3>Gemini 2.0 Flash Experimental</h3>
+                                <p>Google 最新实验版本的多模态模型，支持文本、图像、音频等多种输入，响应速度快且功能强大</p>
+                                <div class="model-name">gemini-2.0-flash-exp</div>
                             </div>
                         </div>
                     </div>
@@ -538,7 +513,7 @@ openai.api_key = "YOUR_API_KEY"
 
 # 发送请求
 response = openai.ChatCompletion.create(
-    model="claude-3-7-sonnet-thinking",  # 可以使用任何支持的模型
+    model="gemini-2.0-flash-exp",  # 可以使用任何支持的模型
     messages=[
         {"role": "user", "content": "你好，请介绍一下自己"}
     ],
@@ -559,7 +534,7 @@ print(response.choices[0].message.content)</code>
     'Authorization': 'Bearer YOUR_API_KEY'
   },
   body: JSON.stringify({
-    model: 'gpt-4o',  // 可以使用任何支持的模型
+    model: 'llama-3.3-70b-instruct',  // 可以使用任何支持的模型
     messages: [
       {
         role: 'user',
@@ -587,7 +562,7 @@ const openai = new OpenAI({
 
 async function chatWithAI() {
   const completion = await openai.chat.completions.create({
-    model: 'claude-3-5-sonnet-20241022',  // 可以使用任何支持的模型
+    model: 'llama-3.1-405b',  // 可以使用任何支持的模型
     messages: [
       { role: 'user', content: '你好，请介绍一下自己' }
     ],
@@ -634,13 +609,13 @@ chatWithAI();</code>
   "id": "chatcmpl-xxx",
   "object": "chat.completion",
   "created": 1677652288,
-  "model": "claude-3-7-sonnet-thinking",
+  "model": "deepseek-v3",
   "choices": [
     {
       "index": 0,
       "message": {
         "role": "assistant",
-        "content": "你好！我是Claude助手..."
+        "content": "你好！我是AI助手..."
       },
       "finish_reason": "stop"
     }

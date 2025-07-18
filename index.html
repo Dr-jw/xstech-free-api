@@ -156,6 +156,11 @@
             background: linear-gradient(135deg, #4285f4, #34a853);
         }
 
+        /* Qwen 模型样式 */
+        .qwen {
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+        }
+
         .contact-info {
             background: #f0f4f8;
             padding: 25px;
@@ -422,9 +427,14 @@
                                 <div class="model-name">deepseek-r1</div>
                             </div>
                             <div class="model-card deepseek">
+                                <h3>DeepSeek R1 (0528)</h3>
+                                <p>R1 模型的特定版本，在特定任务上经过优化调整，保持了优秀的推理能力</p>
+                                <div class="model-name">deepseek-r1-0528</div>
+                            </div>
+                            <div class="model-card deepseek">
                                 <h3>DeepSeek V3</h3>
                                 <p>强大的通用对话模型，在多个任务上表现优异，平衡了性能与效率，支持多轮对话</p>
-                                <div class="model-name">deepseek-v3</div>
+                                <div class="model-name">deepseek-v3-0324</div>
                             </div>
                         </div>
                     </div>
@@ -435,13 +445,8 @@
                         <div class="models">
                             <div class="model-card llama">
                                 <h3>Llama 3.3 70B Instruct</h3>
-                                <p>Meta 最新的中型规模模型，具有 70B 参数，在推理和代码生成方面表现出色</p>
+                                <p>Meta 最新的中型规模模型，具有 70B 参数，在推理和代码生成方面表现出色，响应速度快</p>
                                 <div class="model-name">llama-3.3-70b-instruct</div>
-                            </div>
-                            <div class="model-card llama">
-                                <h3>Llama 3.1 405B</h3>
-                                <p>目前最大规模的开源语言模型，拥有 405B 参数，在复杂任务和长文本处理上性能卓越</p>
-                                <div class="model-name">llama-3.1-405b</div>
                             </div>
                         </div>
                     </div>
@@ -454,6 +459,28 @@
                                 <h3>Gemini 2.0 Flash Experimental</h3>
                                 <p>Google 最新实验版本的多模态模型，支持文本、图像、音频等多种输入，响应速度快且功能强大</p>
                                 <div class="model-name">gemini-2.0-flash-exp</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Qwen 模型 -->
+                    <div class="category">
+                        <h3>🔥 Qwen 模型</h3>
+                        <div class="models">
+                            <div class="model-card qwen">
+                                <h3>Qwen 2.5 Coder 32B</h3>
+                                <p>专为编程任务优化的大型语言模型，在代码生成、调试和编程问答方面表现卓越</p>
+                                <div class="model-name">qwen-2.5-coder-32b-instruct</div>
+                            </div>
+                            <div class="model-card qwen">
+                                <h3>Qwen 3 235B</h3>
+                                <p>超大规模语言模型，拥有 235B 参数，在复杂推理和知识问答方面性能强劲</p>
+                                <div class="model-name">qwen3-235b-a22b</div>
+                            </div>
+                            <div class="model-card qwen">
+                                <h3>QwQ 32B</h3>
+                                <p>专注于数学和逻辑推理的模型，在数学问题求解和逻辑分析方面表现优异</p>
+                                <div class="model-name">qwq-32b</div>
                             </div>
                         </div>
                     </div>
@@ -534,7 +561,7 @@ print(response.choices[0].message.content)</code>
     'Authorization': 'Bearer YOUR_API_KEY'
   },
   body: JSON.stringify({
-    model: 'llama-3.3-70b-instruct',  // 可以使用任何支持的模型
+    model: 'qwen-2.5-coder-32b-instruct',  // 可以使用任何支持的模型
     messages: [
       {
         role: 'user',
@@ -562,7 +589,7 @@ const openai = new OpenAI({
 
 async function chatWithAI() {
   const completion = await openai.chat.completions.create({
-    model: 'llama-3.1-405b',  // 可以使用任何支持的模型
+    model: 'qwq-32b',  // 可以使用任何支持的模型
     messages: [
       { role: 'user', content: '你好，请介绍一下自己' }
     ],
@@ -609,7 +636,7 @@ chatWithAI();</code>
   "id": "chatcmpl-xxx",
   "object": "chat.completion",
   "created": 1677652288,
-  "model": "deepseek-v3",
+  "model": "deepseek-r1",
   "choices": [
     {
       "index": 0,
